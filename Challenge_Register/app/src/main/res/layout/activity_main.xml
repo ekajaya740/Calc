@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF00073C"
+    tools:context=".MainActivity">
+
+    <!-- backgroundThint hanya untuk membuat garis berwarna Putih/sesuai keinginan-->
+    <EditText
+        android:id="@+id/inputFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#989595"
+        app:layout_constraintEnd_toEndOf="@+id/LabelRegis"
+        app:layout_constraintStart_toStartOf="@+id/LabelRegis"
+        app:layout_constraintTop_toBottomOf="@+id/LabelRegis" />
+
+    <EditText
+        android:id="@+id/inputLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#989595"
+        app:layout_constraintEnd_toEndOf="@+id/inputFirstName"
+        app:layout_constraintStart_toStartOf="@+id/inputFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/inputFirstName" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FF989595"
+        app:layout_constraintEnd_toEndOf="@+id/inputLastName"
+        app:layout_constraintStart_toStartOf="@+id/inputLastName"
+        app:layout_constraintTop_toBottomOf="@+id/inputLastName"
+        android:backgroundTint="@android:color/white" />
+    <Button
+        android:id="@+id/regisBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#310670"
+        android:onClick="onClickBtn"
+        android:text="Register"
+        android:textColor="#D5C1C1"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+    <TextView
+        android:id="@+id/txtFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/first"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/regisBtn"
+        app:layout_constraintStart_toStartOf="@+id/regisBtn"
+        app:layout_constraintTop_toBottomOf="@+id/regisBtn" />
+
+    <TextView
+        android:id="@+id/txtLast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/last"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/txtFirst"
+        app:layout_constraintStart_toStartOf="@+id/txtFirst"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirst" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/email"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/txtLast"
+        app:layout_constraintStart_toStartOf="@+id/txtLast"
+        app:layout_constraintTop_toBottomOf="@+id/txtLast" />
+
+    <TextView
+        android:id="@+id/LabelRegis"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/oswald_light"
+        android:gravity="center_horizontal"
+        android:text="Form Register"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
